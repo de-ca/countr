@@ -1,0 +1,20 @@
+# Datenbank & Daten
+/data/*.db
+/data/*.db-journal
+/data/*.db-shm
+/data/*.db-wal
+/data/backups/*.gz
+
+# Konfiguration & Setup-Status
+/inc/config.php
+/data/config.json
+/data/.setup_done
+
+# Cache & Logs
+/cache/*.json
+/cache/*.tmp
+/data/logs/*.log
+
+# Systemdateien
+.DS_Store
+Thumbs.db
