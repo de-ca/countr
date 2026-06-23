@@ -222,4 +222,28 @@ class Stats
         $this->timeProcessor->setCacheTTL($seconds);
         return $this;
     }
+
+    /**
+     * Invalidate all stats cache files.
+     *
+     * Removes all .json cache files from the cache directory,
+     * forcing fresh data on the next dashboard load.
+     *
+     * @return int Number of deleted cache files
+     */
+    public function invalidateCache(): int
+    {
+        $cacheDir = __DIR__ . '/../cache';
+        $count = 0;
+        $files = glob($cacheDir . '/*.json');
+        if ($files === false) {
+            return 0;
+        }
+        foreach ($files as $file) {
+            if (@unlink($file)) {
+                $count++;
+            }
+        }
+        return $count;
+    }
 }
