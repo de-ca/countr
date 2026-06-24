@@ -1,6 +1,8 @@
 Read this in German: [Lies das auf Deutsch](README-de.md)
 
-![](github-banner.svg)
+<div align="center">
+  <img src="assets/github-banner.svg" alt="Countr Banner">
+</div>
 
 ---
 
